@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="images/favicon.ico"
+			type="image/x-icon"
+		/>
+		<title>Users</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<h1 class="header-heading">Users</h1>
+				</div>
+			</header>
+			<main class="main">
+				<div class="container">
+					<div class="filters">
+						<label class="filters-age-label">
+							Filter by age
+							<select
+								class="filters-age-select"
+								name="filters-age"
+								id="ageGroup"
+							>
+								<option class="filters-age-option" value="all">
+									All users
+								</option>
+								<option
+									class="filters-age-option"
+									value="under18"
+								>
+									Under 18 years old
+								</option>
+								<option
+									class="filters-age-option"
+									value="18-30"
+								>
+									18-30 years old
+								</option>
+								<option
+									class="filters-age-option"
+									value="31-60"
+								>
+									31-60 years old
+								</option>
+								<option
+									class="filters-age-option"
+									value="over60"
+								>
+									Over 60 years old
+								</option>
+							</select>
+						</label>
+						<label class="filters-sort-label">
+							Sort by
+							<select
+								class="filters-sort-select"
+								name="filters-sort"
+								id="sortGroup"
+							>
+								<option
+									class="filters-sort-option"
+									value="null"
+								></option>
+								<option
+									class="filters-sort-option"
+									value="name-a-z"
+								>
+									First name: a-z
+								</option>
+								<option
+									class="filters-sort-option"
+									value="name-z-a"
+								>
+									First name: z-a
+								</option>
+								<option
+									class="filters-sort-option"
+									value="last-name-a-z"
+								>
+									Last name: a-z
+								</option>
+								<option
+									class="filters-sort-option"
+									value="last-name-z-a"
+								>
+									Last name: z-a
+								</option>
+								<option
+									class="filters-sort-option"
+									value="age-low-high"
+								>
+									Age: Low to High
+								</option>
+								<option
+									class="filters-sort-option"
+									value="age-high-low"
+								>
+									Age: High to Low
+								</option>
+							</select>
+						</label>
+						<button id="resetFilters" class="filters-reset">
+							Reset all
+						</button>
+					</div>
+					<p class="loading" style="display: none">
+						Loading users...
+					</p>
+					<p class="error" style="display: none">
+						Failed to load users. Please try again.
+					</p>
+					<div class="users">
+						<div class="users-line">
+							<p class="users-list-item-image">Photo</p>
+							<h4 class="users-list-item-name">First name</h4>
+							<h4 class="users-list-item-last-name">Last name</h4>
+							<p class="users-list-item-age">Age</p>
+							<p class="users-list-item-email">Email</p>
+						</div>
+						<p class="users-error" style="display: none">
+							Users not found :(
+						</p>
+						<ul class="users-list"></ul>
+					</div>
+				</div>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+	<script src="script.js"></script>
+</html>
